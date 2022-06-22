@@ -1,8 +1,103 @@
 import React from "react";
+import Categories from "../Categories/Categories";
+import Select from "../Dropdown/Dropdown";
 import { BsBell } from "react-icons/bs";
 import { AiOutlineShoppingCart, AiOutlineSearch } from "react-icons/ai";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import "./navbar.scss";
+
+const dropdownCats = [
+  {
+    key: "c1",
+    title: "Motors",
+    value: [
+      "Parts & Accesories",
+      "Cars & Trucks",
+      "Motorcycles",
+      "Other vehicles",
+    ],
+  },
+  {
+    key: "c2",
+    title: "Electronics",
+    value: [
+      "Parts & Accesories",
+      "Cars & Trucks",
+      "Motorcycles",
+      "Other vehicles",
+    ],
+  },
+  {
+    key: "c3",
+    title: "Collectibles & Art",
+    value: [
+      "Parts & Accesories",
+      "Cars & Trucks",
+      "Motorcycles",
+      "Other vehicles",
+    ],
+  },
+  {
+    key: "c4",
+    title: "Clothing & Accessories",
+    value: [
+      "Parts & Accesories",
+      "Cars & Trucks",
+      "Motorcycles",
+      "Other vehicles",
+    ],
+  },
+  {
+    key: "c5",
+    title: "Business & Industrial",
+    value: [
+      "Parts & Accesories",
+      "Cars & Trucks",
+      "Motorcycles",
+      "Other vehicles",
+    ],
+  },
+  {
+    key: "c6",
+    title: "Home & Garden",
+    value: [
+      "Parts & Accesories",
+      "Cars & Trucks",
+      "Motorcycles",
+      "Other vehicles",
+    ],
+  },
+  {
+    key: "c7",
+    title: "Sporting Goods",
+    value: [
+      "Parts & Accesories",
+      "Cars & Trucks",
+      "Motorcycles",
+      "Other vehicles",
+    ],
+  },
+  {
+    key: "c8",
+    title: "Jewelry & Watches",
+    value: [
+      "Parts & Accesories",
+      "Cars & Trucks",
+      "Motorcycles",
+      "Other vehicles",
+    ],
+  },
+  {
+    key: "c9",
+    title: "Other Categories",
+    value: [
+      "Parts & Accesories",
+      "Cars & Trucks",
+      "Motorcycles",
+      "Other vehicles",
+    ],
+  },
+];
 
 function Navbar() {
   return (
@@ -39,8 +134,7 @@ function Navbar() {
         <div className="container">
           <h1 className="logo">e-deal</h1>
           <div className="shop">
-            <span>Shop by category</span>
-            <RiArrowDropDownLine size={40} />
+            <Select options={dropdownCats} />
           </div>
           <div className="search-bar">
             <label className="lbl" htmlFor="search">
@@ -58,6 +152,8 @@ function Navbar() {
           </button>
         </div>
       </div>
+
+      <Categories />
     </header>
   );
 }

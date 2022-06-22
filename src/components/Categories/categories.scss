@@ -1,0 +1,17 @@
+.categories {
+  .container {
+    width: 95%;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      width: 100%;
+      margin: 10px 0;
+      padding: 0;
+      li {
+        cursor: pointer;
+        color: #202123;
+      }
+    }
+  }
+}
